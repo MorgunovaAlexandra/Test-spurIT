@@ -1,0 +1,221 @@
+
+@font-face { 
+    font-family: "Arial";
+    src: url("./fonts/ArialBlack/ArialBlack.woff") format("woff"),
+    url("./fonts/ArialBlack/arialblack-webfont.woff2") format("woff2");
+    font-style: normal;
+    font-display: swap;
+    font-weight: 900;
+}
+@font-face { 
+    font-family: "Arial";
+    src:url("./fonts/ArialRegular/ArialRegular.woff") format("woff"),
+    url("./fonts/ArialRegular/arialregular-webfont.woff2") format("woff2");
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+ }
+body{
+    font-family: "Arial";
+    font-weight: 400;
+    font-size: 16px;
+}
+h2{
+    all: unset;
+}
+.title{
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.cards {
+   display: flex;
+   justify-content: center; 
+   flex-wrap: wrap;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 481.72px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
+}
+.cards__item{
+    margin-right: 20px;
+}
+.cards__item:last-child {
+    margin-right: 0px;
+}
+.card__img{
+    position: relative;
+}
+.card__img img{
+    border-radius: 12px 12px 0 0;
+    max-width: 100%;
+}
+.img__category{
+    position: absolute;
+    top:16px;
+    left: 17px;
+    line-height: 24px;
+    display: flex;
+}
+.category__new{
+    background-color: #FDCFF3;
+    padding: 0 16px;
+    padding-top: 1px;
+    border-radius: 8px;
+    margin-right: 17px;
+}
+.category__last{
+    padding: 0 16px;
+    border-radius: 8px;
+    background-color: #FFCF56;
+}
+.card__decription{
+    margin:20px 24px 0 24px ;
+}
+.description{
+    color:#2F2F2F;
+    flex-grow: 1;
+}
+.description__title{
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 900;
+}
+.description__text{
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 16px;
+}
+.card__button{
+    margin: 0 auto;
+    margin-bottom: 24px;
+}
+.button{
+    width: 87.7%;
+    height: 48px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: white;
+    color:#42940F;
+    border: 2px solid #42940F;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 900;
+}
+.button:hover{
+   background-color:  #42940F;
+   color:white;
+}
+.button:active{
+    background-color: #1F5200;
+    border: none;
+}
+.card__button_disabled{
+    width: 87.7%;
+    height: 48px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: #4E4E4E;
+    color:white;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 24px;
+    font-weight: 900;
+}
+@media(max-width:1180px){
+    .cards {
+        justify-content: flex-start; 
+     }
+     .cards__item:last-child {
+        margin-top: 20px;
+    }
+}
+@media(max-width:1000px){
+    body{
+        font-size: 11px;
+    }
+    .title{
+        font-size: 30px; 
+        padding-bottom:30px;
+    }
+    .card {
+        width: 300px;
+        height: 401.72px;
+    }
+    .cards__item{
+        margin: 0 10px 10px 10px;  
+    }
+    .card__decription{
+        margin:10px 10px 0 10px ;
+    }
+    .description__title{
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 10px;
+    }
+    .description__text{
+        font-size: 13px;
+    }
+    .button{
+        width: 90%;
+    }
+    .button{
+        height:39px;
+        font-size: 14px;
+    }
+    .card__button_disabled{
+        height:39px;
+        font-size: 14px;
+    }
+    .cards__item:last-child {
+        margin-top: 0px;
+    }
+  } 
+  @media(max-width:778px){
+    .category__last{
+        padding: 0 8px;
+    }
+    .title{
+        font-size: 25px; 
+        padding-bottom:20px;
+    }
+    .card {
+        width: 240px;
+        height: 340px;
+    }
+    
+    .description__title{
+        font-size: 17px;
+    }
+    .description__text{
+        font-size: 12px;
+        line-height: 16px;
+    }
+  }
+  @media(max-width:486px){
+    .title{
+        padding-bottom:0px;
+    }
+    .cards {
+       justify-content: space-around;
+     }
+     .cards__item{
+        margin-top: 20px;
+    }
+  }
